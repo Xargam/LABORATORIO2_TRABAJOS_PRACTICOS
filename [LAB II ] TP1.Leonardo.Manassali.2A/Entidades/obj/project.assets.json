@@ -3709,11 +3709,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Leo\\Desktop\\Tp\\[LAB II ] TP1.Leonardo.Manassali.2A\\Entidades\\Entidades.csproj",
+      "projectUniqueName": "C:\\Users\\Leo\\Desktop\\Tp1\\[LAB II ] TP1.Leonardo.Manassali.2A\\Entidades\\Entidades.csproj",
       "projectName": "Entidades",
-      "projectPath": "C:\\Users\\Leo\\Desktop\\Tp\\[LAB II ] TP1.Leonardo.Manassali.2A\\Entidades\\Entidades.csproj",
+      "projectPath": "C:\\Users\\Leo\\Desktop\\Tp1\\[LAB II ] TP1.Leonardo.Manassali.2A\\Entidades\\Entidades.csproj",
       "packagesPath": "C:\\Users\\Leo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Leo\\Desktop\\Tp\\[LAB II ] TP1.Leonardo.Manassali.2A\\Entidades\\obj\\",
+      "outputPath": "C:\\Users\\Leo\\Desktop\\Tp1\\[LAB II ] TP1.Leonardo.Manassali.2A\\Entidades\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

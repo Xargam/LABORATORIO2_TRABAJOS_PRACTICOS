@@ -112,24 +112,15 @@ namespace Entidades
 		public string BinarioDecimal(string binario)
 		{
 			string numDecimal = "Valor invalido";
-			bool esBinario = true;
 			double numero;
-			foreach( char digito in binario )
-			{
-				if( digito != '1' && digito != '0' && digito != '-' && digito != ',' && digito != '.')
-				{
-					esBinario = false;
-					break;
-				}
-			}
-			if ( Double.TryParse(binario, out numero) && esBinario )
+			//Valida que sea un número, que sea y binario y que no sea demasiado extenso...
+			if ( Double.TryParse(binario, out numero) && binario.Trim('1','0',',','.','-') == "" && Math.Abs(numero) <= 1111111111111111111111111111111111111111111111111.0 )
 			{
 				numero = 0;
-				//Eliminación de coma y signo y puntos en caso de existir.
+				//Eliminación de parte no entera, coma, signo y puntos en caso de existir.
 				binario = binario.Replace("-", "");
-				binario = binario.Replace(",", "");
 				binario = binario.Replace(".", "");
-
+				binario = (binario.IndexOf(',') > -1)? binario.Remove(binario.IndexOf(',')) : binario ;
 				for (int i = 0 ; i < binario.Length; i++)
 				{
 					numero += Double.Parse(binario[i].ToString())*Math.Pow(2, binario.Length -1-i);
@@ -157,14 +148,16 @@ namespace Entidades
 		public string DecimalBinario(string numero)
 		{
 			string binario = "Valor invalido";
-			if( Double.TryParse(numero,out double numDecimal) )
+			if( Double.TryParse(numero,out double numDecimal))
 			{
-				numDecimal = Math.Truncate(Math.Abs(numDecimal));
-				binario = (numDecimal == 0) ? "0" : "";
-				while (numDecimal > 0)
+				if( (numDecimal = Math.Truncate(Math.Abs(numDecimal))) < 536870912 )
 				{
-					binario = (Math.Truncate(numDecimal % 2)).ToString() + binario;
-					numDecimal = Math.Truncate(numDecimal / 2);
+					binario = (numDecimal == 0) ? "0" : "";
+					while (numDecimal > 0)
+					{
+						binario = (Math.Truncate(numDecimal % 2)).ToString() + binario;
+						numDecimal = Math.Truncate(numDecimal / 2);
+					}
 				}
 			}
 			return binario;
