@@ -113,7 +113,7 @@ namespace Entidades
 		{
 			string numDecimal = "Valor invalido";
 			double numero;
-			//Valida que sea un número, que sea y binario y que no sea demasiado extenso...
+			//Valida que sea un número, que sea binario y no  demasiado extenso...
 			if ( Double.TryParse(binario, out numero) && binario.Trim('1','0',',','.','-') == "" && Math.Abs(numero) <= 1111111111111111111111111111111111111111111111111.0 )
 			{
 				numero = 0;
