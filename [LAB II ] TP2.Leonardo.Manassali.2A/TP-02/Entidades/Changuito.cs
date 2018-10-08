@@ -13,8 +13,8 @@ namespace Entidades2018
     {
 		#region Atributos
 
-		int espacioDisponible;
-		List<Producto> productos;
+		private int espacioDisponible;
+		private List<Producto> productos;
 
 		#endregion
 
