@@ -10,6 +10,12 @@ namespace Archivos
 	public class Xml<T> : IArchivo<T>
 	{
 		#region MetodosIArchivo
+		/// <summary>
+		/// Guarda cualquier tipo de dato de un archivo XML específico mediante serialización UTF-8 ENCODING.
+		/// </summary>
+		/// <param name="archivo">Ruta del archivo.</param>
+		/// <param name="datos">Datos a serializar en XML.</param>
+		/// <returns>Devuelve true si los datos se guardaron exitosamente, en caso contrario se produce una excepción.</returns>
 		public bool Guardar(string archivo, T datos)
 		{
 			try
@@ -25,6 +31,12 @@ namespace Archivos
 			}
 			return true;
 		}
+		/// <summary>
+		/// Deserializa un archivo XML con cualquier tipo de dato.
+		/// </summary>
+		/// <param name="archivo">Ruta del archivo.</param>
+		/// <param name="datos">Variable receptora de datos.</param>
+		/// <returns>Devuelve true si los datos fueron leídos exitosamente, en caso contrario arroja una excepción.</returns>
 		public bool Leer(string archivo, out T datos)
 		{
 			try

@@ -3,16 +3,6 @@ using System.Text;
 
 namespace EntidadesAbstractas
 {
-	//	Abstracta, con los atributos Nombre, Apellido, Nacionalidad y DNI.
-	// Se deberá validar que el DNI sea correcto, teniendo en cuenta su nacionalidad.Argentino entre 1 y
-	//89999999 y Extranjero entre 90000000 y 99999999. Caso contrario, se lanzará la excepción
-	//NacionalidadInvalidaException.
-	// Si el DNI presenta un error de formato (más caracteres de los permitidos, letras, etc.) se lanzará
-	//DniInvalidoException.
-	// Sólo se realizarán las validaciones dentro de las propiedades.
-	// Validará que los nombres sean cadenas con caracteres válidos para nombres.Caso contrario, no se
-	//cargará.
-	// ToString retornará los datos de la Persona.
 	public abstract class Persona
 	{
 		#region Atributos
@@ -23,6 +13,9 @@ namespace EntidadesAbstractas
 		#endregion
 
 		#region Propiedades
+		/// <summary>
+		/// El apellido solo será seteado si es una cadena de caracteres válida para este dato.
+		/// </summary>
 		public string Apellido
 		{
 			get
@@ -31,9 +24,15 @@ namespace EntidadesAbstractas
 			}
 			set
 			{
-				this.apellido = value;
+				if (this.ValidarNombreApellido(value) != string.Empty)
+				{
+					this.apellido = value;
+				}
 			}
 		}
+		/// <summary>
+		/// Si el DNI a setear no es válido se produce una excepción.
+		/// </summary>
 		public int DNI
 		{
 			get
@@ -56,6 +55,9 @@ namespace EntidadesAbstractas
 				this.nacionalidad = value;
 			}
 		}
+		/// <summary>
+		/// El nombre solo será seteado si es una cadena de caracteres válida para este dato.
+		/// </summary>
 		public string Nombre
 		{
 			get 
@@ -64,9 +66,16 @@ namespace EntidadesAbstractas
 			}
 			set
 			{
-				this.nombre = value;
+				if (this.ValidarNombreApellido(value) != string.Empty)
+				{
+					this.nombre = value;
+				}
+				
 			}
 		}
+		/// <summary>
+		/// Si el DNI a setear no es válido se produce una excepción.
+		/// </summary>
 		public string StringToDNI
 		{
 			set
@@ -81,15 +90,35 @@ namespace EntidadesAbstractas
 		{
 
 		}
+		/// <summary>
+		/// Inicializa un objeto persona sin DNI. Este dato quedará en 0.
+		/// </summary>
+		/// <param name="nombre"></param>
+		/// <param name="apellido"></param>
+		/// <param name="nacionalidad"></param>
 		public Persona(string nombre, string apellido, ENacionalidad nacionalidad)
 		{
 			this.Nombre = nombre;
 			this.Apellido = apellido;
 			this.Nacionalidad = nacionalidad;
 		}
+		/// <summary>
+		/// Inicializa un objeto persona con todos sus datos.
+		/// </summary>
+		/// <param name="nombre"></param>
+		/// <param name="apellido"></param>
+		/// <param name="dni"></param>
+		/// <param name="nacionalidad"></param>
 		public Persona(string nombre, string apellido, int dni, ENacionalidad nacionalidad) : this(nombre,apellido,dni.ToString(),nacionalidad)
 		{
 		}
+		/// <summary>
+		/// Inicializa un objeto persona con todos sus datos.
+		/// </summary>
+		/// <param name="nombre"></param>
+		/// <param name="apellido"></param>
+		/// <param name="dni"></param>
+		/// <param name="nacionalidad"></param>
 		public Persona(string nombre, string apellido, string dni, ENacionalidad nacionalidad) : this(nombre,apellido,nacionalidad)
 		{
 			this.StringToDNI = dni;
@@ -97,6 +126,10 @@ namespace EntidadesAbstractas
 		#endregion
 
 		#region Metodos
+		/// <summary>
+		/// Devuelve una cadena de caracteres detallando los datos del objeto Persona.
+		/// </summary>
+		/// <returns></returns>
 		public override string ToString()
 		{
 			StringBuilder datos = new StringBuilder();
@@ -105,6 +138,12 @@ namespace EntidadesAbstractas
 			datos.AppendFormat("DNI: {0}", this.DNI);
 			return datos.ToString();
 		}
+		/// <summary>
+		/// Valida que un DNI de tipo int32 extranjero este en un rango que va de 90000000 a 99999999 y uno Argentino entre 1 y 89999999 en caso contrario lanza una excepción propia.
+		/// </summary>
+		/// <param name="nacionalidad">Nacionalidad asociada del objeto Persona.</param>
+		/// <param name="dato">Numero de documento.</param>
+		/// <returns>Devuelve el DNI en formato int32 validado.</returns>
 		private int ValidarDni(ENacionalidad nacionalidad, int dato)
 		{
 			if ((nacionalidad == ENacionalidad.Argentino && (dato > 89999999 || dato < 1)) || (nacionalidad == ENacionalidad.Extranjero && (dato > 99999999 || dato < 90000000)))
@@ -113,6 +152,12 @@ namespace EntidadesAbstractas
 			}
 			return dato;
 		}
+		/// <summary>
+		/// Valida que un DNI en formato string tenga una cantidad correcta de caracteres y sea numérico, en caso de error lanza una excepción. Realiza además una vericación de rango númerico correcto lanzando en ese caso otra excepción.
+		/// </summary>
+		/// <param name="nacionalidad">Nacionalidad asociada del objeto Persona.</param>
+		/// <param name="dato">Numero de documento.</param>
+		/// <returns>Devuelve el dni validado en formato int32.</returns>
 		private int ValidarDni(ENacionalidad nacionalidad, string dato)
 		{
 			if(dato.Length > 0 && dato.Length < 9 && int.TryParse(dato, out dni))
@@ -125,6 +170,11 @@ namespace EntidadesAbstractas
 			}
 			return dni;
 		}
+		/// <summary>
+		/// Valida que una cadena contenga únicamente caracteres alfabéticos. Devuelve una cadena vacía en caso de error.
+		/// </summary>
+		/// <param name="dato">Cadena de carácteres a verificar.</param>
+		/// <returns></returns>
 		private string ValidarNombreApellido(string dato)
 		{
 			foreach (char item in dato)
