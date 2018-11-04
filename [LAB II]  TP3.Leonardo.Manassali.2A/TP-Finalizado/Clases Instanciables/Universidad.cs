@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using Excepciones;
+using Archivos;
 
-namespace ClasesInstanciables
+namespace EntidadesInstanciables
 {
 	public class Universidad
 	{
@@ -168,10 +169,7 @@ namespace ClasesInstanciables
 
 			foreach (Alumno item in g.Alumnos)
 			{
-				if(item == clase)
-				{
-					jornada += item;
-				}
+				jornada += item;
 			}
 			g.Jornadas.Add(jornada);
 			return g;
@@ -198,7 +196,6 @@ namespace ClasesInstanciables
 		}
 		#endregion
 
-
 		#endregion
 
 		#region Metodos
@@ -206,29 +203,36 @@ namespace ClasesInstanciables
 		{
 			return Universidad.MostrarDatos(this);
 		}
-		public bool Guardar(Universidad uni)
-		{
-			return true;
-		}
 		private static string MostrarDatos(Universidad uni)
 		{
 			StringBuilder datos = new StringBuilder();
-			datos.AppendLine("Profesores:");
-			foreach (Profesor item in uni.Instructores)
-			{
-				datos.AppendLine(item.ToString());
-			}
-			datos.AppendLine("Alumnos:");
-			foreach (Alumno item in uni.Alumnos)
-			{
-				datos.AppendLine(item.ToString());
-			}
-			datos.AppendLine("Jornadas:");
+			datos.AppendLine("JORNADAS:");
 			foreach (Jornada item in uni.Jornadas)
 			{
 				datos.AppendLine(item.ToString());
 			}
+			datos.AppendLine("ALUMNOS:");
+			foreach (Alumno item in uni.Alumnos)
+			{
+				datos.AppendLine(item.ToString());
+			}
+			datos.AppendLine("<------------------------------------------------>\r\n");
+			datos.AppendLine("PROFESORES:");
+			foreach (Profesor item in uni.Instructores)
+			{
+				datos.AppendLine(item.ToString());
+			}
+			datos.AppendLine("<------------------------------------------------>");
 			return datos.ToString();
+		}
+		public static bool Guardar(Universidad uni)
+		{
+			return new Xml<Universidad>().Guardar(AppDomain.CurrentDomain.BaseDirectory + "\\Universidad.xml", uni);
+		}
+		public static Universidad Leer(Universidad uni)
+		{
+			new Xml<Universidad>().Leer(AppDomain.CurrentDomain.BaseDirectory + "\\Universidad.xml", out uni);
+			return uni;
 		}
 		#endregion
 

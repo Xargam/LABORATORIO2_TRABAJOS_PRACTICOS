@@ -39,7 +39,7 @@ namespace EntidadesAbstractas
 		{
 			StringBuilder datos = new StringBuilder();
 			datos.AppendLine(base.ToString());
-			datos.AppendFormat("Legajo: {0}\r\n", this.legajo);
+			datos.AppendFormat("LEGAJO NÚMERO: {0}", this.legajo);
 			return datos.ToString();
 		}
 		protected abstract string ParticiparEnClase();

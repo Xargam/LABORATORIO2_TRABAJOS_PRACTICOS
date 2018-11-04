@@ -26,6 +26,19 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "Archivos/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Excepciones": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Archivos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Archivos.dll": {}
+        }
+      },
       "Clases Abstractas/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -192,6 +205,11 @@
         "netstandard.library.nuspec"
       ]
     },
+    "Archivos/1.0.0": {
+      "type": "project",
+      "path": "../Archivos/Archivos.csproj",
+      "msbuildProject": "../Archivos/Archivos.csproj"
+    },
     "Clases Abstractas/1.0.0": {
       "type": "project",
       "path": "../Clases Abstractas/Clases Abstractas.csproj",
@@ -205,6 +223,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "Archivos >= 1.0.0",
       "Clases Abstractas >= 1.0.0",
       "Excepciones >= 1.0.0",
       "NETStandard.Library >= 2.0.3"
@@ -240,6 +259,9 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
+            "C:\\Users\\Leo\\Desktop\\LABORATORIO_2_TRABAJOS_PRACTICOS\\[LAB II]  TP3.Leonardo.Manassali.2A\\TP-Finalizado\\Archivos\\Archivos.csproj": {
+              "projectPath": "C:\\Users\\Leo\\Desktop\\LABORATORIO_2_TRABAJOS_PRACTICOS\\[LAB II]  TP3.Leonardo.Manassali.2A\\TP-Finalizado\\Archivos\\Archivos.csproj"
+            },
             "C:\\Users\\Leo\\Desktop\\LABORATORIO_2_TRABAJOS_PRACTICOS\\[LAB II]  TP3.Leonardo.Manassali.2A\\TP-Finalizado\\Clases Abstractas\\Clases Abstractas.csproj": {
               "projectPath": "C:\\Users\\Leo\\Desktop\\LABORATORIO_2_TRABAJOS_PRACTICOS\\[LAB II]  TP3.Leonardo.Manassali.2A\\TP-Finalizado\\Clases Abstractas\\Clases Abstractas.csproj"
             },

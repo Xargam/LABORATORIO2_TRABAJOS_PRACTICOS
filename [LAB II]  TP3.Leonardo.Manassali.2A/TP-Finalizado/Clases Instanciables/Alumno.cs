@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using EntidadesAbstractas;
 
-namespace ClasesInstanciables
+namespace EntidadesInstanciables
 {
 	public sealed class Alumno : Universitario
 	{
@@ -30,11 +30,11 @@ namespace ClasesInstanciables
 		#region Operadores
 		public static bool operator !=(Alumno a, Universidad.EClases clase)
 		{
-			return a.claseQueToma == clase && a.estadoCuenta != EEstadoCuenta.Deudor;
+			return a.claseQueToma != clase;
 		}
 		public static bool operator ==(Alumno a, Universidad.EClases clase)
 		{
-			return a.claseQueToma != clase;
+			return a.claseQueToma == clase && a.estadoCuenta != EEstadoCuenta.Deudor;
 		}
 		#endregion
 
@@ -47,8 +47,8 @@ namespace ClasesInstanciables
 		{
 			StringBuilder datos = new StringBuilder();
 			datos.AppendLine(base.MostrarDatos());
+			datos.AppendFormat("ESTADO DE CUENTA: {0}\r\n", this.estadoCuenta.ToString());
 			datos.AppendLine(this.ParticiparEnClase());
-			datos.AppendFormat("Estado de su cuenta: {0}", this.estadoCuenta.ToString());
 			return datos.ToString();
 		}
 		protected override string ParticiparEnClase()

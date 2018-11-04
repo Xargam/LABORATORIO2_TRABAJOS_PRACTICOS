@@ -100,16 +100,16 @@ namespace EntidadesAbstractas
 		public override string ToString()
 		{
 			StringBuilder datos = new StringBuilder();
-			datos.AppendFormat("Nombre y apellido: {0} {1}\r\n", this.Nombre, this.Apellido);
-			datos.AppendFormat("DNI: {0}\r\n", this.DNI);
-			datos.AppendFormat("Nacionalidad: {0}", this.Nacionalidad.ToString());
+			datos.AppendFormat("NOMBRE COMPLETO: {0}, {1}\r\n", this.Apellido, this.Nombre);
+			datos.AppendFormat("NACIONALIDAD: {0}\r\n", this.Nacionalidad.ToString());
+			datos.AppendFormat("DNI: {0}", this.DNI);
 			return datos.ToString();
 		}
 		private int ValidarDni(ENacionalidad nacionalidad, int dato)
 		{
 			if ((nacionalidad == ENacionalidad.Argentino && (dato > 89999999 || dato < 1)) || (nacionalidad == ENacionalidad.Extranjero && (dato > 99999999 || dato < 90000000)))
 			{
-				throw new NacionalidadInvalidaException("El número de DNI no coincide para la nacionalidad o es invalido.");
+				throw new NacionalidadInvalidaException("La nacionalidad no se coincide con el número de DNI.");
 			}
 			return dato;
 		}

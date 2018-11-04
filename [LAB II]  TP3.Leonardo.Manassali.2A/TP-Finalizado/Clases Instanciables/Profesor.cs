@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using EntidadesAbstractas;
-using ClasesInstanciables;
 
-namespace ClasesInstanciables
+namespace EntidadesInstanciables
 {
 	public sealed class Profesor : Universitario
 	{
@@ -58,17 +57,17 @@ namespace ClasesInstanciables
 		}
 		protected override string ParticiparEnClase()
 		{
-			string datos = "CLASES DEL DÍA\r\n";
+			string datos = "\r\nCLASES DEL DÍA:\r\n";
 			foreach (Universidad.EClases item in this.clasesDelDia)
 			{
-				datos = item.ToString() + '\n';
+				datos += item.ToString() + "\r\n";
  			}
 			return datos;
 		}
 		private void _randomClases()
 		{
-			this.clasesDelDia.Enqueue((Universidad.EClases)Profesor.random.Next(0, 3));
-			this.clasesDelDia.Enqueue((Universidad.EClases)Profesor.random.Next(0, 3));
+			this.clasesDelDia.Enqueue((Universidad.EClases)Profesor.random.Next(0, 4));
+			this.clasesDelDia.Enqueue((Universidad.EClases)Profesor.random.Next(0, 4));
 		}
 		#endregion
 	}

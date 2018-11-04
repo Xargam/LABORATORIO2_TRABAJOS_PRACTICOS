@@ -7,7 +7,7 @@ namespace Excepciones
 	public class AlumnoRepetidoException : Exception
 	{
 		#region Constructor
-		public AlumnoRepetidoException() : base("Alumno NO agregado, ya se encuentra en la lista.")
+		public AlumnoRepetidoException() : base("Alumno repetido.")
 		{
 		}
 		#endregion

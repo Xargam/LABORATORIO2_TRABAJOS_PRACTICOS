@@ -2,10 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>ClasesInstanciables</RootNamespace>
+    <RootNamespace>EntidadesInstanciables</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Archivos\Archivos.csproj" />
     <ProjectReference Include="..\Clases Abstractas\Clases Abstractas.csproj" />
     <ProjectReference Include="..\Excepciones\Excepciones.csproj" />
   </ItemGroup>

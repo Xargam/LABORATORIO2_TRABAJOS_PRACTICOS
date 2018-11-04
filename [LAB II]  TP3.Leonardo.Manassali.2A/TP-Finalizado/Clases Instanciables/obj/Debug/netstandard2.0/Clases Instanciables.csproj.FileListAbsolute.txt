@@ -26,3 +26,5 @@ C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II]  TP3.Leonardo.Man
 C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II]  TP3.Leonardo.Manassali.2A\TP-Finalizado\Clases Instanciables\obj\Debug\netstandard2.0\Clases Instanciables.csproj.CopyComplete
 C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II]  TP3.Leonardo.Manassali.2A\TP-Finalizado\Clases Instanciables\obj\Debug\netstandard2.0\Clases Instanciables.dll
 C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II]  TP3.Leonardo.Manassali.2A\TP-Finalizado\Clases Instanciables\obj\Debug\netstandard2.0\Clases Instanciables.pdb
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II]  TP3.Leonardo.Manassali.2A\TP-Finalizado\Clases Instanciables\bin\Debug\netstandard2.0\Archivos.dll
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II]  TP3.Leonardo.Manassali.2A\TP-Finalizado\Clases Instanciables\bin\Debug\netstandard2.0\Archivos.pdb

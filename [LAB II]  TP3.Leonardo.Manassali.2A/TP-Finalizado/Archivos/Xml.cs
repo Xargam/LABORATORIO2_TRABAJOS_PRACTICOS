@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Excepciones;
+using System;
 using System.IO;
-using System.Xml.Serialization;
+using System.Text;
 using System.Xml;
-using Excepciones;
+using System.Xml.Serialization;
 
 namespace Archivos
 {
@@ -15,13 +14,12 @@ namespace Archivos
 		{
 			try
 			{
-				using (StreamWriter stremWriter = new StreamWriter(archivo))
-				{
-					XmlSerializer xml = new XmlSerializer(typeof(T));
-					xml.Serialize(stremWriter, datos);
-				}
+				XmlTextWriter xmlTextWriter = new XmlTextWriter(archivo, Encoding.UTF8);
+				XmlSerializer serializer = new XmlSerializer(typeof(T));
+				serializer.Serialize(xmlTextWriter, datos);
+				xmlTextWriter.Close();
 			}
-			catch (Exception e )
+			catch (Exception e)
 			{
 				throw new ArchivosException(e);
 			}
@@ -31,18 +29,17 @@ namespace Archivos
 		{
 			try
 			{
-				using (StreamReader stremWriter = new StreamReader(archivo))
-				{
-					XmlSerializer xml = new XmlSerializer(typeof(T));
-					datos = (T)xml.Deserialize(stremWriter);
-				}
+				XmlTextReader xmlTextReader = new XmlTextReader(archivo);
+				XmlSerializer DeSerializer = new XmlSerializer(typeof(T));
+				datos = (T)DeSerializer.Deserialize(xmlTextReader);
+				xmlTextReader.Close();
 			}
 			catch (Exception e)
 			{
 				throw new ArchivosException(e);
 			}
 			return true;
-		} 
+		}
 		#endregion
 	}
 }

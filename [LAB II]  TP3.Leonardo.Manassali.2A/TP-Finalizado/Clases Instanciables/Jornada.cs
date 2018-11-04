@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Text;
+using Archivos;
+using System;
 
-namespace ClasesInstanciables
+namespace EntidadesInstanciables
 {
 	public class Jornada
 	{
@@ -73,13 +75,16 @@ namespace ClasesInstanciables
 		}
 		public static Jornada operator +(Jornada j, Alumno a)
 		{
-			j.Alumnos.Add(a);
-			foreach ( Alumno item in j.Alumnos)
+			if(j == a)
 			{
-				if (item == a)
+				j.Alumnos.Add(a);
+				foreach (Alumno item in j.Alumnos)
 				{
-					j.Alumnos.Remove(a);
-					break;
+					if (item == a && !object.Equals(a,item) )
+					{
+						j.Alumnos.Remove(a);
+						break;
+					}
 				}
 			}
 			return j;
@@ -94,21 +99,24 @@ namespace ClasesInstanciables
 		public override string ToString()
 		{
 			StringBuilder datos = new StringBuilder();
-			datos.AppendFormat("CLASE DE {0}",this.Clase.ToString());
+			datos.AppendFormat("CLASE DE {0} POR ",this.Clase.ToString());
 			datos.AppendLine(this.Instructor.ToString());
+			datos.AppendLine("ALUMNOS:");
 			foreach (Alumno item in this.Alumnos)
 			{
-				datos.AppendLine(item.ToString());
+				datos.AppendLine(item.ToString()) ;
 			}
+			datos.AppendLine("<------------------------------------------------>");
 			return datos.ToString();
 		}
-		public string Leer()
+		public static string Leer()
 		{
-			return "";
+			new Texto().Leer(AppDomain.CurrentDomain.BaseDirectory + "\\Jornada.txt", out string datos);
+			return datos;
 		}
-		public bool Guardar(Jornada jornada)
+		public static bool Guardar(Jornada jornada)
 		{
-			return true;
+			return new Texto().Guardar(AppDomain.CurrentDomain.BaseDirectory + "\\Jornada.txt", jornada.ToString());
 		}
 		#endregion
 	}

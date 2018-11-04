@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Archivos;
 using EntidadesAbstractas;
-using ClasesInstanciables;
+using EntidadesInstanciables;
 using Excepciones;
 
 namespace Testeo_clases
@@ -14,7 +14,7 @@ namespace Testeo_clases
 	{
 		static void Main(string[] args)
 		{
-			/*Universidad gim = new Universidad();
+			Universidad gim = new Universidad();
 			Alumno a1 = new Alumno(1, "Juan", "Lopez", "12234456",
 			EntidadesAbstractas.Persona.ENacionalidad.Argentino, Universidad.EClases.Programacion,
 			Alumno.EEstadoCuenta.Becado);
@@ -104,7 +104,7 @@ namespace Testeo_clases
 			Console.Clear();
 			try
 			{
-				//Universidad.Guardar(gim);
+				Universidad.Guardar(gim);
 				Console.WriteLine("Archivo de Universidad guardado.");
 			}
 			catch (ArchivosException e)
@@ -114,26 +114,14 @@ namespace Testeo_clases
 			try
 			{
 				int jornada = 0;
-				//Jornada.Guardar(gim[jornada]);
+				Jornada.Guardar(gim[jornada]);
 				Console.WriteLine("Archivo de Jornada {0} guardado.", jornada);
-				//Console.WriteLine(Jornada.Leer());
+				Console.WriteLine(Jornada.Leer());
 			}
 			catch (ArchivosException e)
 			{
 				Console.WriteLine(e.Message);
-			}*/
-			string path = @"C:\Users\Leo\Desktop\archivito.xml";
-			Universidad gim = new Universidad();
-			Alumno a4 = new Alumno(4, "Miguel", "Hernandez", "92264456",
-			EntidadesAbstractas.Persona.ENacionalidad.Extranjero, Universidad.EClases.Legislacion,
-			Alumno.EEstadoCuenta.AlDia);
-			gim += a4;
-			Alumno a5 = new Alumno(5, "Carlos", "Gonzalez", "12236456",
-			EntidadesAbstractas.Persona.ENacionalidad.Argentino, Universidad.EClases.Programacion,
-			Alumno.EEstadoCuenta.AlDia);
-			gim += a5;
-			Xml<Universidad> xml = new Xml<Universidad>();
-			xml.Guardar(path, gim);
+			}
 			Console.ReadKey();
 		}
 	}
