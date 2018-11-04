@@ -1,0 +1,21 @@
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II]  TP3.Leonardo.Manassali.2A\Manassali.Leonardo.2A.TP3\Archivos\bin\Debug\netstandard2.0\Archivos.deps.json
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II]  TP3.Leonardo.Manassali.2A\Manassali.Leonardo.2A.TP3\Archivos\bin\Debug\netstandard2.0\Archivos.dll
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II]  TP3.Leonardo.Manassali.2A\Manassali.Leonardo.2A.TP3\Archivos\bin\Debug\netstandard2.0\Archivos.pdb
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II]  TP3.Leonardo.Manassali.2A\Manassali.Leonardo.2A.TP3\Archivos\obj\Debug\netstandard2.0\Archivos.csprojAssemblyReference.cache
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II]  TP3.Leonardo.Manassali.2A\Manassali.Leonardo.2A.TP3\Archivos\obj\Debug\netstandard2.0\Archivos.csproj.CoreCompileInputs.cache
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II]  TP3.Leonardo.Manassali.2A\Manassali.Leonardo.2A.TP3\Archivos\obj\Debug\netstandard2.0\Archivos.AssemblyInfoInputs.cache
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II]  TP3.Leonardo.Manassali.2A\Manassali.Leonardo.2A.TP3\Archivos\obj\Debug\netstandard2.0\Archivos.AssemblyInfo.cs
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II]  TP3.Leonardo.Manassali.2A\Manassali.Leonardo.2A.TP3\Archivos\obj\Debug\netstandard2.0\Archivos.dll
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II]  TP3.Leonardo.Manassali.2A\Manassali.Leonardo.2A.TP3\Archivos\obj\Debug\netstandard2.0\Archivos.pdb
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II]  TP3.Leonardo.Manassali.2A\TP-Finalizado\Archivos\bin\Debug\netstandard2.0\Archivos.deps.json
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II]  TP3.Leonardo.Manassali.2A\TP-Finalizado\Archivos\bin\Debug\netstandard2.0\Archivos.dll
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II]  TP3.Leonardo.Manassali.2A\TP-Finalizado\Archivos\bin\Debug\netstandard2.0\Archivos.pdb
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II]  TP3.Leonardo.Manassali.2A\TP-Finalizado\Archivos\bin\Debug\netstandard2.0\Excepciones.dll
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II]  TP3.Leonardo.Manassali.2A\TP-Finalizado\Archivos\bin\Debug\netstandard2.0\Excepciones.pdb
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II]  TP3.Leonardo.Manassali.2A\TP-Finalizado\Archivos\obj\Debug\netstandard2.0\Archivos.csprojAssemblyReference.cache
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II]  TP3.Leonardo.Manassali.2A\TP-Finalizado\Archivos\obj\Debug\netstandard2.0\Archivos.csproj.CoreCompileInputs.cache
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II]  TP3.Leonardo.Manassali.2A\TP-Finalizado\Archivos\obj\Debug\netstandard2.0\Archivos.AssemblyInfoInputs.cache
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II]  TP3.Leonardo.Manassali.2A\TP-Finalizado\Archivos\obj\Debug\netstandard2.0\Archivos.AssemblyInfo.cs
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II]  TP3.Leonardo.Manassali.2A\TP-Finalizado\Archivos\obj\Debug\netstandard2.0\Archivos.csproj.CopyComplete
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II]  TP3.Leonardo.Manassali.2A\TP-Finalizado\Archivos\obj\Debug\netstandard2.0\Archivos.dll
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II]  TP3.Leonardo.Manassali.2A\TP-Finalizado\Archivos\obj\Debug\netstandard2.0\Archivos.pdb
