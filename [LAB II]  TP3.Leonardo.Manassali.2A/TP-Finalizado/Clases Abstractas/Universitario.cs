@@ -11,7 +11,6 @@ namespace EntidadesAbstractas
 		#region Constructores
 		public Universitario()
 		{
-
 		}
 		/// <summary>
 		/// Inicializa un objeto Universitario con todos sus datos.
