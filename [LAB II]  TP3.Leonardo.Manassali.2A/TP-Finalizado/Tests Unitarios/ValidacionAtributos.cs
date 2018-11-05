@@ -23,8 +23,8 @@ namespace TestsUnitarios
 
 			Alumno a3 = new Alumno(14, "123", "123", "44", Persona.ENacionalidad.Argentino, Universidad.EClases.Laboratorio);
 			//Verifico que atributos erroneos se guarden con null.
-			Assert.IsNull(a3.Apellido,"Apellido fue mal cargado debería quedar en null.");
-			Assert.IsNull(a3.Nombre, "Nombre fue mal cargado debería quedar en null.");
+			Assert.AreEqual(a3.Apellido,"","Apellido fue mal cargado debería quedar en null.");
+			Assert.AreEqual(a3.Nombre,"","Nombre fue mal cargado debería quedar en null.");
 		}
 		/// <summary>
 		/// Verifica que los atributos de la clase Profesor no sean nulos inesperadamente.
@@ -41,8 +41,8 @@ namespace TestsUnitarios
 
 			Profesor p2 = new Profesor(14, "123", "123", "44", Persona.ENacionalidad.Argentino);
 			//Verifico que atributos erroneos se guarden con null.
-			Assert.IsNull(p2.Apellido, "Apellido fue mal cargado debería quedar en null.");
-			Assert.IsNull(p2.Nombre, "Nombre fue mal cargado debería quedar en null.");
+			Assert.AreEqual(p2.Apellido,"", "Apellido fue mal cargado debería quedar en null.");
+			Assert.AreEqual(p2.Nombre,"","Nombre fue mal cargado debería quedar en null.");
 		}
 		/// <summary>
 		/// Verifica que los atributos de la clase Jornada no sean nulos inesperadamente.

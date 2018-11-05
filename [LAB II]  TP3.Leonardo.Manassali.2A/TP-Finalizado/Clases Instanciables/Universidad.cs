@@ -78,7 +78,7 @@ namespace EntidadesInstanciables
 		{
 			get
 			{
-				Jornada jornada = null;
+				Jornada jornada;
 				if (i >= 0 && i < this.jornada.Count)
 				{
 					jornada = this.jornada[i];

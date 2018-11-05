@@ -36,6 +36,7 @@ namespace Archivos
 		/// <returns>Devuelve true si el archivo fue leído exitosamente, en caso contrario se produce una excepción.</returns>
 		public bool Leer(string archivo, out string datos)
 		{
+			datos = "";
 			try
 			{
 				using (StreamReader textArch = new StreamReader(archivo))

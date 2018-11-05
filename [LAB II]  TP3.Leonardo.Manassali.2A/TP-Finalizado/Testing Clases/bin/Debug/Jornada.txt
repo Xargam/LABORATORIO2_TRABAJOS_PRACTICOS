@@ -1,10 +1,10 @@
-CLASE DE Legislacion POR NOMBRE COMPLETO: Juarez, Roberto
+CLASE DE Legislacion POR NOMBRE COMPLETO: Lopez, Juan
 NACIONALIDAD: Argentino
-DNI: 32234456
-LEGAJO NÚMERO: 2
+DNI: 12234456
+LEGAJO NÚMERO: 1
 CLASES DEL DÍA:
 Legislacion
-SPD
+Legislacion
 
 ALUMNOS:
 NOMBRE COMPLETO: Hernandez, Miguel

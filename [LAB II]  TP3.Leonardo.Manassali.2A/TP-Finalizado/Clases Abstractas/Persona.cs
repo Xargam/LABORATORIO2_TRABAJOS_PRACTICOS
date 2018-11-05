@@ -24,10 +24,7 @@ namespace EntidadesAbstractas
 			}
 			set
 			{
-				if (this.ValidarNombreApellido(value) != string.Empty)
-				{
-					this.apellido = value;
-				}
+				this.apellido = this.ValidarNombreApellido(value);
 			}
 		}
 		/// <summary>
@@ -66,10 +63,7 @@ namespace EntidadesAbstractas
 			}
 			set
 			{
-				if (this.ValidarNombreApellido(value) != string.Empty)
-				{
-					this.nombre = value;
-				}
+				this.nombre = this.ValidarNombreApellido(value);
 			}
 		}
 		/// <summary>
@@ -158,7 +152,7 @@ namespace EntidadesAbstractas
 		/// <returns>Devuelve el dni validado en formato int32.</returns>
 		private int ValidarDni(ENacionalidad nacionalidad, string dato)
 		{
-			if(dato.Length > 0 && dato.Length < 9 && int.TryParse(dato, out dni))
+			if( !object.Equals(dato , null) && dato.Length > 0 && dato.Length < 9 && int.TryParse(dato, out dni))
 			{
 				dni = this.ValidarDni(nacionalidad, dni);
 			}
@@ -175,17 +169,20 @@ namespace EntidadesAbstractas
 		/// <returns></returns>
 		private string ValidarNombreApellido(string dato)
 		{
+			//Si el string recibido es nulo aquí se evita un error.
+			dato = (object.Equals(dato, null)) ? "" : dato;
 			//Arregla errores comunes en espacido.
 			dato = dato.Trim();
 			while (dato.Contains("  "))
 			{
-				dato = dato.Replace("  "," ");
+				dato = dato.Replace("  ", " ");
 			}
+			//Revisa que la cadena contenga espacios y letras.
 			foreach (char item in dato)
 			{
-				if(!char.IsLetter(item) && !char.IsWhiteSpace(item) )
+				if (!char.IsLetter(item) && !char.IsWhiteSpace(item))
 				{
-					dato = string.Empty;
+					dato = "";
 					break;
 				}
 			}
