@@ -10,20 +10,26 @@ namespace TestsUnitarios
 	[TestClass]
 	public class ValidacionExcepciones
 	{
+		/// <summary>
+		/// Verifica que la excepción AlumnoRepetidoException sea lanzada correctamente tanto en Jornada como en Universidad.
+		/// </summary>
 		[TestMethod]
-		public void TestMethod1()
+		public void VerificarAlumnoRepetidoException()
 		{
-			try
-			{
-				Profesor uni;
-				Console.WriteLine(10 + null); 
-			}
-			catch (Exception)
-			{
-				Assert.Fail();
-			}
-			
-			
+		}
+		/// <summary>
+		/// Verifica que la excepción SinProfesorException sea lanzada correctamente.
+		/// </summary>
+		[TestMethod]
+		public void VerificarSinProfesorException()
+		{
+		}
+		/// <summary>
+		/// Verifica que la excepción ArchivosException sea lanzada correctamente en las clases.
+		/// </summary>
+		[TestMethod]
+		public void VerificarArchivosException()
+		{
 		}
 	}
 }

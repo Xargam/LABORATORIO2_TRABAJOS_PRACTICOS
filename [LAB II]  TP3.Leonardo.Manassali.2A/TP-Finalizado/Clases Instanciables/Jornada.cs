@@ -2,6 +2,7 @@
 using System.Text;
 using Archivos;
 using System;
+using Excepciones;
 
 namespace EntidadesInstanciables
 {
@@ -91,7 +92,17 @@ namespace EntidadesInstanciables
 		/// <returns>Devuelve true si la jornada es igual a la clase o false en caso contrario.</returns>
 		public static bool operator ==(Jornada j , Alumno a)
 		{
-			return a == j.Clase;
+			return !object.Equals(j,null) && a == j.Clase;
+		}
+		/// <summary>
+		/// Una jornada será distinta a un alumno si el alumno NO toma la clase registrada en la jornada.
+		/// </summary>
+		/// <param name="j">Jornada a comparar.</param>
+		/// <param name="a">Alumno a comparar.</param>
+		/// <returns>Devuelve true si la jornada es distinta a la clase o false en caso contrario.</returns>
+		public static bool operator !=(Jornada j, Alumno a)
+		{
+			return !(j == a);
 		}
 		/// <summary>
 		/// Agrega un alumno a la jornada solo si este puede cursarla y ya no se encuentra en la misma.
@@ -99,8 +110,15 @@ namespace EntidadesInstanciables
 		/// <param name="j">Jornada donde se agregará el alumno.</param>
 		/// <param name="a">alumno a agregar a la jornada.</param>
 		/// <returns>Devuelve la jornada con el alumno cargado si fue posible.</returns>
+		/// <summary>
+		/// Una jornada será disntina a un alumno si el alumno NO puede tomar la clase registrada en la jornada.
+		/// </summary>
+		/// <param name="j">Jornada a comparar.</param>
+		/// <param name="a">Alumno a comparar.</param>
+		/// <returns>Devuelve true si la jornada es distinta al alumno o false en caso ocntrario.</returns>
 		public static Jornada operator +(Jornada j, Alumno a)
 		{
+			//Si la jornada es nula no es considera igual a ningun objeto.
 			if(j == a)
 			{
 				j.Alumnos.Add(a);
@@ -109,21 +127,11 @@ namespace EntidadesInstanciables
 					if (item == a && !object.Equals(a,item) )
 					{
 						j.Alumnos.Remove(a);
-						break;
+						throw new AlumnoRepetidoException();
 					}
 				}
 			}
 			return j;
-		}
-		/// <summary>
-		/// Una jornada será disntina a un alumno si el alumno NO puede tomar la clase registrada en la jornada.
-		/// </summary>
-		/// <param name="j">Jornada a comparar.</param>
-		/// <param name="a">Alumno a comparar.</param>
-		/// <returns>Devuelve true si la jornada es distinta al alumno o false en caso ocntrario.</returns>
-		public static bool operator !=(Jornada j, Alumno a)
-		{
-			return !(j==a);
 		}
 		#endregion
 
@@ -136,7 +144,7 @@ namespace EntidadesInstanciables
 		{
 			StringBuilder datos = new StringBuilder();
 			datos.AppendFormat("CLASE DE {0} POR ",this.Clase.ToString());
-			datos.AppendLine(this.Instructor.ToString());
+			datos.AppendLine( (object.Equals(this.Instructor,null))? "" : this.Instructor.ToString() );
 			datos.AppendLine("ALUMNOS:");
 			foreach (Alumno item in this.Alumnos)
 			{
@@ -151,17 +159,17 @@ namespace EntidadesInstanciables
 		/// <returns></returns>
 		public static string Leer()
 		{
-			new Texto().Leer(AppDomain.CurrentDomain.BaseDirectory + "\\Jornada.txt", out string datos);
+			new Texto().Leer(".\\Jornada.txt", out string datos);
 			return datos;
 		}
 		/// <summary>
-		/// Guarda los datos de un objeto de tipo Jornada en un archivo de texto que será generado junto al .exe de la aplicación y devuelve true en caso de éxito. Genera una excepción si se produce algún error.
+		/// Guarda los datos de un objeto de tipo Jornada en un archivo de texto que será generado junto al .exe de la aplicación y devuelve true en caso de éxito o false en caso contrario. Genera una excepción si se produce algún error durante la manipulación de archivos.
 		/// </summary>
 		/// <param name="jornada"></param>
 		/// <returns></returns>
 		public static bool Guardar(Jornada jornada)
 		{
-			return new Texto().Guardar(AppDomain.CurrentDomain.BaseDirectory + "\\Jornada.txt", jornada.ToString());
+			return (object.Equals(jornada,null))? false : new Texto().Guardar(".\\Jornada.txt", jornada.ToString());
 		}
 		#endregion
 	}

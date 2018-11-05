@@ -47,12 +47,15 @@ namespace EntidadesInstanciables
 		public static bool operator ==(Profesor i , Universidad.EClases clase)
 		{
 			bool verificacion = false;
-			foreach (Universidad.EClases item in i.clasesDelDia)
+			if (!object.Equals(i,null))
 			{
-				if(item == clase)
+				foreach (Universidad.EClases item in i.clasesDelDia)
 				{
-					verificacion = true;
-					break;
+					if (item == clase)
+					{
+						verificacion = true;
+						break;
+					}
 				}
 			}
 			return verificacion;

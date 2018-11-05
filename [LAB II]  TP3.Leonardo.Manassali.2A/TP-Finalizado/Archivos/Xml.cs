@@ -42,8 +42,8 @@ namespace Archivos
 			try
 			{
 				XmlTextReader xmlTextReader = new XmlTextReader(archivo);
-				XmlSerializer DeSerializer = new XmlSerializer(typeof(T));
-				datos = (T)DeSerializer.Deserialize(xmlTextReader);
+				XmlSerializer deserializer = new XmlSerializer(typeof(T));
+				datos = (T)deserializer.Deserialize(xmlTextReader);
 				xmlTextReader.Close();
 			}
 			catch (Exception e)

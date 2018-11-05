@@ -1,0 +1,25 @@
+CLASE DE Legislacion POR NOMBRE COMPLETO: Juarez, Roberto
+NACIONALIDAD: Argentino
+DNI: 32234456
+LEGAJO NÚMERO: 2
+CLASES DEL DÍA:
+Legislacion
+SPD
+
+ALUMNOS:
+NOMBRE COMPLETO: Hernandez, Miguel
+NACIONALIDAD: Extranjero
+DNI: 92264456
+LEGAJO NÚMERO: 4
+ESTADO DE CUENTA: AlDia
+TOMA CLASE DE Legislacion
+
+NOMBRE COMPLETO: Smith, Rodrigo
+NACIONALIDAD: Argentino
+DNI: 22236456
+LEGAJO NÚMERO: 8
+ESTADO DE CUENTA: AlDia
+TOMA CLASE DE Legislacion
+
+<------------------------------------------------>
+

@@ -91,9 +91,16 @@ namespace EntidadesInstanciables
 			}
 			set
 			{
-				if (!object.Equals(value,null) && i <= this.Jornadas.Count )
+				if (!object.Equals(value, null))
 				{
-					this.jornada.Add(value);
+					if (i >= 0 && i < this.Jornadas.Count)
+					{
+						this.jornada.Add(value);
+					}
+					else
+					{
+						throw new IndexOutOfRangeException();
+					}
 				}
 			}
 		}
@@ -105,9 +112,9 @@ namespace EntidadesInstanciables
 		/// </summary>
 		public Universidad()
 		{
-			this.profesores = new List<Profesor>();
-			this.alumnos = new List<Alumno>();
-			this.jornada = new List<Jornada>();
+			this.Instructores = new List<Profesor>();
+			this.Alumnos = new List<Alumno>();
+			this.Jornadas = new List<Jornada>();
 		}
 		#endregion
 
@@ -143,15 +150,18 @@ namespace EntidadesInstanciables
 		public static Profesor operator !=(Universidad u, EClases clase)
 		{
 			Profesor profesor = null;
-			foreach (Profesor item in u.Instructores)
+			if (!object.Equals(u,null))
 			{
-				if (item != clase)
+				foreach (Profesor item in u.Instructores)
 				{
-					profesor = item;
-					break;
+					if (item != clase)
+					{
+						profesor = item;
+						break;
+					}
 				}
 			}
-			if( object.Equals(profesor,null))
+			if ( object.Equals(profesor,null))
 			{
 				throw new SinProfesorException();
 			}
@@ -167,12 +177,15 @@ namespace EntidadesInstanciables
 		public static bool operator ==(Universidad g, Alumno a)
 		{
 			bool verificacion = false;
-			foreach (Alumno item in g.Alumnos)
+			if (!object.Equals(g,null))
 			{
-				if (item == a)
+				foreach (Alumno item in g.Alumnos)
 				{
-					verificacion = true;
-					break;
+					if (item == a)
+					{
+						verificacion = true;
+						break;
+					}
 				}
 			}
 			return verificacion;
@@ -186,12 +199,15 @@ namespace EntidadesInstanciables
 		public static bool operator ==(Universidad g, Profesor i)
 		{
 			bool verificacion = false;
-			foreach (Profesor item in g.Instructores)
+			if (!object.Equals(g, null))
 			{
-				if (item == i)
+				foreach (Profesor item in g.Instructores)
 				{
-					verificacion = true;
-					break;
+					if (item == i)
+					{
+						verificacion = true;
+						break;
+					}
 				}
 			}
 			return verificacion;
@@ -205,11 +221,14 @@ namespace EntidadesInstanciables
 		public static Profesor operator ==(Universidad u, EClases clase)
 		{
 			Profesor profesor = null;
-			foreach (Profesor item in u.Instructores)
+			if (!object.Equals(u,null))
 			{
-				if (item == clase)
+				foreach (Profesor item in u.Instructores)
 				{
-					profesor = item;
+					if (item == clase)
+					{
+						profesor = item;
+					}
 				}
 			}
 			if( object.Equals(profesor,null))
@@ -229,13 +248,18 @@ namespace EntidadesInstanciables
 		/// <returns>Devuelve el objeto de tipo universidad.</returns>
 		public static Universidad operator +(Universidad g, EClases clase)
 		{
-			Profesor profesor = g == clase;
-			Jornada jornada = new Jornada(clase, profesor);
-			foreach (Alumno item in g.Alumnos)
+			Profesor profesor;
+			Jornada jornada;
+			if ( !object.Equals(g,null) )
 			{
-				jornada += item;
+				profesor = g == clase;
+				jornada = new Jornada(clase, profesor);
+				foreach (Alumno item in g.Alumnos)
+				{
+					jornada += item;
+				}
+				g.Jornadas.Add(jornada);
 			}
-			g.Jornadas.Add(jornada);
 			return g;
 		}
 		/// <summary>
@@ -246,13 +270,16 @@ namespace EntidadesInstanciables
 		/// <returns>Devuelve el objeto de tipo universidad.</returns>
 		public static Universidad operator +(Universidad u, Alumno a)
 		{
-			if(u != a)
+			if (!object.Equals(u, null) && !object.Equals(a, null) )
 			{
-				u.Alumnos.Add(a);
-			}
-			else
-			{
-				throw new AlumnoRepetidoException();
+				if (u != a)
+				{
+					u.Alumnos.Add(a);
+				}
+				else
+				{
+					throw new AlumnoRepetidoException();
+				}
 			}
 			return u;
 		}
@@ -264,7 +291,7 @@ namespace EntidadesInstanciables
 		/// <returns>Devuelve el objeto de tipo universidad.</returns>
 		public static Universidad operator +(Universidad u, Profesor i)
 		{
-			if (u != i)
+			if ( !object.Equals(u,null) && !object.Equals(i, null) && u != i)
 			{
 				u.profesores.Add(i);
 			}
@@ -317,7 +344,7 @@ namespace EntidadesInstanciables
 		/// <returns>Devuelve true en caso de éxito.</returns>
 		public static bool Guardar(Universidad uni)
 		{
-			return new Xml<Universidad>().Guardar(AppDomain.CurrentDomain.BaseDirectory + "\\Universidad.xml", uni);
+			return (object.Equals(uni,null))? false : new Xml<Universidad>().Guardar(".\\Universidad.xml", uni);
 		}
 		/// <summary>
 		/// Lee los datos de un archivo XML previamente generado junto al .exe de la aplicación y los guarda en un objeto universiddad que será devuelto. Puede generar excepciones en caso de error.
@@ -326,7 +353,7 @@ namespace EntidadesInstanciables
 		/// <returns>Devuelve el objeto universidad.</returns>
 		public static Universidad Leer(Universidad uni)
 		{
-			new Xml<Universidad>().Leer(AppDomain.CurrentDomain.BaseDirectory + "\\Universidad.xml", out uni);
+			new Xml<Universidad>().Leer(".\\Universidad.xml", out uni);
 			return uni;
 		}
 		#endregion

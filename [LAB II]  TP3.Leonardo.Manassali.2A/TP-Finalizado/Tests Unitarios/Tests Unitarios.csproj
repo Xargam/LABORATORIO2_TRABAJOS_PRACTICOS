@@ -49,6 +49,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ValidacionDatosNumericos.cs" />
+    <Compile Include="ValidacionAtributos.cs" />
     <Compile Include="ValidacionExcepciones.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -36,7 +36,8 @@ namespace EntidadesAbstractas
 		/// <returns>Devuelve true si los objetos son iguales o false en caso contrario.</returns>
 		public static bool operator ==(Universitario pg1, Universitario pg2)
 		{
-			return pg1.Equals(pg2) && (pg1.legajo == pg2.legajo || pg1.DNI == pg2.DNI);
+			//Esta evaluación imposibilita generar un error en tiempo de ejecución de la aplicación con valores nulos.
+			return !object.Equals(pg1, null) && pg1.Equals(pg2) && (pg1.legajo == pg2.legajo || pg1.DNI == pg2.DNI);
 		}
 		/// <summary>
 		/// Dos universitarios serán distintos si su legajo o DNI no coinciden o son de distinta clase C#.
@@ -58,7 +59,8 @@ namespace EntidadesAbstractas
 		/// <returns>Devuelve true si los objetos son de la misma clase.</returns>
 		public override bool Equals(object obj)
 		{
-			return obj.GetType() == this.GetType();
+			//Revisa que el objeto no sea nulo para no generar un error en tiempo de ejecución.
+			return !object.Equals(obj,null) && this.GetType() == obj.GetType();
 		}
 		/// <summary>
 		/// Muestra los datos del objeto Universitario y los devuelve como string.

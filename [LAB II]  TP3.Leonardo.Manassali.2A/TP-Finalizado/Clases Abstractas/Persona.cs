@@ -70,7 +70,6 @@ namespace EntidadesAbstractas
 				{
 					this.nombre = value;
 				}
-				
 			}
 		}
 		/// <summary>
@@ -88,7 +87,6 @@ namespace EntidadesAbstractas
 		#region Constructores
 		public Persona()
 		{
-
 		}
 		/// <summary>
 		/// Inicializa un objeto persona sin DNI. Este dato quedará en 0.
@@ -127,7 +125,7 @@ namespace EntidadesAbstractas
 
 		#region Metodos
 		/// <summary>
-		/// Devuelve una cadena de caracteres detallando los datos del objeto Persona.
+		/// Devuelve una cadena de caracteres detallando los datos del objeto Persona. Si una cadena vacía se ve en algún atributo significa que no se ha cargado un valor correcto al mismo.
 		/// </summary>
 		/// <returns></returns>
 		public override string ToString()
@@ -135,7 +133,7 @@ namespace EntidadesAbstractas
 			StringBuilder datos = new StringBuilder();
 			datos.AppendFormat("NOMBRE COMPLETO: {0}, {1}\r\n", this.Apellido, this.Nombre);
 			datos.AppendFormat("NACIONALIDAD: {0}\r\n", this.Nacionalidad.ToString());
-			datos.AppendFormat("DNI: {0}", this.DNI);
+			datos.AppendFormat("DNI: {0}", (this.DNI == 0 )? "" : this.DNI.ToString() );
 			return datos.ToString();
 		}
 		/// <summary>
@@ -177,9 +175,15 @@ namespace EntidadesAbstractas
 		/// <returns></returns>
 		private string ValidarNombreApellido(string dato)
 		{
+			//Arregla errores comunes en espacido.
+			dato = dato.Trim();
+			while (dato.Contains("  "))
+			{
+				dato = dato.Replace("  "," ");
+			}
 			foreach (char item in dato)
 			{
-				if(!char.IsLetter(item))
+				if(!char.IsLetter(item) && !char.IsWhiteSpace(item) )
 				{
 					dato = string.Empty;
 					break;

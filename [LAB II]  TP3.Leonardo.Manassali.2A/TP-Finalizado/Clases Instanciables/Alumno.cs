@@ -17,7 +17,7 @@ namespace EntidadesInstanciables
 		{
 		}
 		/// <summary>
-		/// Inicializa los del objeto Alumno a excepción del estadoCuenta.
+		/// Inicializa los campos del objeto Alumno dejando el estadoCuenta en su valor por defecto "AlDia" .
 		/// </summary>
 		/// <param name="id"></param>
 		/// <param name="nombre"></param>
@@ -25,9 +25,8 @@ namespace EntidadesInstanciables
 		/// <param name="dni"></param>
 		/// <param name="nacionalidad"></param>
 		/// <param name="claseQueToma"></param>
-		public Alumno(int id , string nombre , string apellido , string dni , ENacionalidad nacionalidad , Universidad.EClases claseQueToma) : base(id,nombre,apellido,dni,nacionalidad)
+		public Alumno(int id , string nombre , string apellido , string dni , ENacionalidad nacionalidad , Universidad.EClases claseQueToma) : this(id,nombre,apellido,dni,nacionalidad,claseQueToma,EEstadoCuenta.AlDia)
 		{
-			this.claseQueToma = claseQueToma;
 		}
 		/// <summary>
 		/// Inicializa todos los campos del objeto Alumno.
@@ -39,8 +38,9 @@ namespace EntidadesInstanciables
 		/// <param name="nacionalidad"></param>
 		/// <param name="claseQueToma"></param>
 		/// <param name="estadoCuenta"></param>
-		public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases claseQueToma, EEstadoCuenta estadoCuenta) : this(id, nombre, apellido, dni, nacionalidad, claseQueToma)
+		public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases claseQueToma, EEstadoCuenta estadoCuenta) : base(id,nombre,apellido,dni,nacionalidad)
 		{
+			this.claseQueToma = claseQueToma;
 			this.estadoCuenta = estadoCuenta;
 		}
 		#endregion
@@ -54,17 +54,18 @@ namespace EntidadesInstanciables
 		/// <returns>Devuelve true si el alumno es distinto a la clase o false en caso contrario.</returns>
 		public static bool operator !=(Alumno a, Universidad.EClases clase)
 		{
-			return a.claseQueToma != clase;
+			//Si el alumno es nulo no participa de la clase.
+			return (object.Equals(a,null))? true : a.claseQueToma != clase;
 		}
 		/// <summary>
-		/// Un alumno será igual a una clase si participa de la misma.
+		/// Un alumno será igual a una clase si participa de la misma y su estado de cuenta no es deudor.
 		/// </summary>
 		/// <param name="a">Alumno a comparar.</param>
 		/// <param name="clase">Clase a comparar.</param>
 		/// <returns>Devuelve true si el alumno es igual a la clase o false en caso contrario.</returns>
 		public static bool operator ==(Alumno a, Universidad.EClases clase)
 		{
-			return a.claseQueToma == clase && a.estadoCuenta != EEstadoCuenta.Deudor;
+			return !object.Equals(a, null) && a.claseQueToma == clase && a.estadoCuenta != EEstadoCuenta.Deudor;
 		}
 		#endregion
 
