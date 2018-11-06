@@ -1,25 +1,25 @@
-CLASE DE Legislacion POR NOMBRE COMPLETO: Lopez, Juan
+CLASE DE Programacion POR NOMBRE COMPLETO: Juarez, Roberto
+NACIONALIDAD: Argentino
+DNI: 32234456
+LEGAJO NÚMERO: 2
+CLASES DEL DÍA:
+Programacion
+SPD
+
+ALUMNOS:
+NOMBRE COMPLETO: Lopez, Juan
 NACIONALIDAD: Argentino
 DNI: 12234456
 LEGAJO NÚMERO: 1
-CLASES DEL DÍA:
-Legislacion
-Legislacion
+ESTADO DE CUENTA: Becado
+TOMA CLASE DE Programacion
 
-ALUMNOS:
-NOMBRE COMPLETO: Hernandez, Miguel
-NACIONALIDAD: Extranjero
-DNI: 92264456
-LEGAJO NÚMERO: 4
-ESTADO DE CUENTA: AlDia
-TOMA CLASE DE Legislacion
-
-NOMBRE COMPLETO: Smith, Rodrigo
+NOMBRE COMPLETO: Gonzalez, Carlos
 NACIONALIDAD: Argentino
-DNI: 22236456
-LEGAJO NÚMERO: 8
+DNI: 12236456
+LEGAJO NÚMERO: 5
 ESTADO DE CUENTA: AlDia
-TOMA CLASE DE Legislacion
+TOMA CLASE DE Programacion
 
 <------------------------------------------------>
 

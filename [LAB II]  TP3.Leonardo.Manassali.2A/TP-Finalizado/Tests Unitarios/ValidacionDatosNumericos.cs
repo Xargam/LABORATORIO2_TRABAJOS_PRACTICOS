@@ -16,15 +16,17 @@ namespace TestsUnitarios
 		public void VerificarDniRango()
 		{
 			bool seProdujoLaExcepcion = false;
+			Alumno alumno300 = null;
 			try
 			{
-				Alumno alumno = new Alumno(44, "Marcelo", "Vara", "4545", Persona.ENacionalidad.Extranjero, Universidad.EClases.Legislacion);
+				alumno300 = new Alumno(44, "Marcelo", "Vara", "4545", Persona.ENacionalidad.Extranjero, Universidad.EClases.Legislacion);
 			}
 			catch (NacionalidadInvalidaException)
 			{
 				seProdujoLaExcepcion = true;
 			}
 			Assert.IsTrue(seProdujoLaExcepcion, "Se debería haber producido una excepción de tipo NacionalidadInvalidaException, dni fuera de rango.");
+			Assert.IsNull(alumno300,"Se produjo una excepción en momento de instanciado , el objeto debería ser nulo.");
 
 			seProdujoLaExcepcion = false;
 			try

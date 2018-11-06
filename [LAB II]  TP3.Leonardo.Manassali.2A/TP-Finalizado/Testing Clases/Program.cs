@@ -22,7 +22,7 @@ namespace TestingClases
 				Alumno a2 = new Alumno(2, "Juana", "Martinez", "12234458", EntidadesAbstractas.Persona.ENacionalidad.Extranjero, Universidad.EClases.Laboratorio, Alumno.EEstadoCuenta.Deudor);
 				gim += a2;
 			}
-			catch(NacionalidadInvalidaException e)
+			catch (NacionalidadInvalidaException e)
 			{
 				Console.WriteLine(e.Message);
 			}

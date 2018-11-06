@@ -118,18 +118,17 @@ namespace EntidadesInstanciables
 		/// <returns>Devuelve true si la jornada es distinta al alumno o false en caso ocntrario.</returns>
 		public static Jornada operator +(Jornada j, Alumno a)
 		{
-			//Si la jornada es nula no es considera igual a ningun objeto.
-			if(j == a)
+			//Si la jornada o el alumno son null no es consideran iguales.
+			if(j == a ) 
 			{
-				j.Alumnos.Add(a);
 				foreach (Alumno item in j.Alumnos)
 				{
-					if (item == a && !object.Equals(a,item) )
+					if ( item == a )
 					{
-						j.Alumnos.Remove(a);
 						throw new AlumnoRepetidoException();
 					}
 				}
+				j.Alumnos.Add(a);
 			}
 			return j;
 		}

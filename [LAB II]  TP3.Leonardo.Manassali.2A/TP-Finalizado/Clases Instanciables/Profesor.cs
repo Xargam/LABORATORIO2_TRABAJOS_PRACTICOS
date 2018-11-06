@@ -33,7 +33,7 @@ namespace EntidadesInstanciables
 		public Profesor(int id, string nombre , string apellido , string dni , ENacionalidad nacionalidad) : base(id,nombre,apellido,dni,nacionalidad) 
 		{
 			this.clasesDelDia = new Queue<Universidad.EClases>();
-			this._randomClases();
+			this.RandomClases();
 		}
 		#endregion
 
@@ -105,7 +105,7 @@ namespace EntidadesInstanciables
 		/// <summary>
 		/// Inicializa la cola del objeto profesor con dos Clases al azar.
 		/// </summary>
-		private void _randomClases()
+		private void RandomClases()
 		{
 			this.clasesDelDia.Enqueue((Universidad.EClases)Profesor.random.Next(0, 4));
 			this.clasesDelDia.Enqueue((Universidad.EClases)Profesor.random.Next(0, 4));

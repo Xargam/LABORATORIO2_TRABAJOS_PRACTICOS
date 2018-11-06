@@ -78,14 +78,10 @@ namespace EntidadesInstanciables
 		{
 			get
 			{
-				Jornada jornada;
-				if (i >= 0 && i < this.jornada.Count)
+				Jornada jornada = null;
+				if (i >= 0 && i < this.Jornadas.Count)
 				{
-					jornada = this.jornada[i];
-				}
-				else
-				{
-					throw new IndexOutOfRangeException();
+					jornada = this.Jornadas[i];
 				}
 				return jornada;
 			}
@@ -95,11 +91,11 @@ namespace EntidadesInstanciables
 				{
 					if (i >= 0 && i < this.Jornadas.Count)
 					{
-						this.jornada.Add(value);
+						this.Jornadas[i] = value;
 					}
-					else
+					else if ( i == this.Jornadas.Count )
 					{
-						throw new IndexOutOfRangeException();
+						this.Jornadas.Add(value);
 					}
 				}
 			}
@@ -228,6 +224,7 @@ namespace EntidadesInstanciables
 					if (item == clase)
 					{
 						profesor = item;
+						break;
 					}
 				}
 			}
@@ -248,18 +245,14 @@ namespace EntidadesInstanciables
 		/// <returns>Devuelve el objeto de tipo universidad.</returns>
 		public static Universidad operator +(Universidad g, EClases clase)
 		{
-			Profesor profesor;
-			Jornada jornada;
-			if ( !object.Equals(g,null) )
+			//Si el igual no encuentra profesor lanza excepción y el flujo se va del método.
+			Profesor profesor = g == clase;
+			Jornada jornada = new Jornada(clase, profesor);
+			foreach (Alumno item in g.Alumnos)
 			{
-				profesor = g == clase;
-				jornada = new Jornada(clase, profesor);
-				foreach (Alumno item in g.Alumnos)
-				{
-					jornada += item;
-				}
-				g.Jornadas.Add(jornada);
+				jornada += item;
 			}
+			g.Jornadas.Add(jornada);
 			return g;
 		}
 		/// <summary>
@@ -272,14 +265,11 @@ namespace EntidadesInstanciables
 		{
 			if (!object.Equals(u, null) && !object.Equals(a, null) )
 			{
-				if (u != a)
-				{
-					u.Alumnos.Add(a);
-				}
-				else
+				if (u == a)
 				{
 					throw new AlumnoRepetidoException();
 				}
+				u.Alumnos.Add(a);
 			}
 			return u;
 		}
@@ -293,7 +283,7 @@ namespace EntidadesInstanciables
 		{
 			if ( !object.Equals(u,null) && !object.Equals(i, null) && u != i)
 			{
-				u.profesores.Add(i);
+				u.Instructores.Add(i);
 			}
 			return u;
 		}

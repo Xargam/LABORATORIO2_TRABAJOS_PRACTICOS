@@ -127,7 +127,7 @@ namespace EntidadesAbstractas
 			StringBuilder datos = new StringBuilder();
 			datos.AppendFormat("NOMBRE COMPLETO: {0}, {1}\r\n", this.Apellido, this.Nombre);
 			datos.AppendFormat("NACIONALIDAD: {0}\r\n", this.Nacionalidad.ToString());
-			datos.AppendFormat("DNI: {0}", (this.DNI == 0 )? "" : this.DNI.ToString() );
+			datos.AppendFormat("DNI: {0}", this.DNI );
 			return datos.ToString();
 		}
 		/// <summary>
@@ -171,16 +171,10 @@ namespace EntidadesAbstractas
 		{
 			//Si el string recibido es nulo aquí se evita un error.
 			dato = (object.Equals(dato, null)) ? "" : dato;
-			//Arregla errores comunes en espacido.
-			dato = dato.Trim();
-			while (dato.Contains("  "))
-			{
-				dato = dato.Replace("  ", " ");
-			}
-			//Revisa que la cadena contenga espacios y letras.
+			//Revisa que la cadena contenga letras.
 			foreach (char item in dato)
 			{
-				if (!char.IsLetter(item) && !char.IsWhiteSpace(item))
+				if (!char.IsLetter(item))
 				{
 					dato = "";
 					break;
