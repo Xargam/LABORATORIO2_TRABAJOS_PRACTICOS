@@ -182,11 +182,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Leo\\Desktop\\LABORATORIO_2_TRABAJOS_PRACTICOS\\[LAB II]  TP3.Leonardo.Manassali.2A\\TP-Finalizado\\Excepciones\\Excepciones.csproj",
+      "projectUniqueName": "C:\\Users\\Leo\\Desktop\\LABORATORIO_2_TRABAJOS_PRACTICOS\\[LAB II ]  TP3.Leonardo.Manassali.2A\\TP-Finalizado\\Excepciones\\Excepciones.csproj",
       "projectName": "Excepciones",
-      "projectPath": "C:\\Users\\Leo\\Desktop\\LABORATORIO_2_TRABAJOS_PRACTICOS\\[LAB II]  TP3.Leonardo.Manassali.2A\\TP-Finalizado\\Excepciones\\Excepciones.csproj",
+      "projectPath": "C:\\Users\\Leo\\Desktop\\LABORATORIO_2_TRABAJOS_PRACTICOS\\[LAB II ]  TP3.Leonardo.Manassali.2A\\TP-Finalizado\\Excepciones\\Excepciones.csproj",
       "packagesPath": "C:\\Users\\Leo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Leo\\Desktop\\LABORATORIO_2_TRABAJOS_PRACTICOS\\[LAB II]  TP3.Leonardo.Manassali.2A\\TP-Finalizado\\Excepciones\\obj\\",
+      "outputPath": "C:\\Users\\Leo\\Desktop\\LABORATORIO_2_TRABAJOS_PRACTICOS\\[LAB II ]  TP3.Leonardo.Manassali.2A\\TP-Finalizado\\Excepciones\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

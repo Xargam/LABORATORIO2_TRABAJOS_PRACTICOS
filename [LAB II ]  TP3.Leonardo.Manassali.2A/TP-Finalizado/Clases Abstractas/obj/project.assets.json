@@ -198,11 +198,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Leo\\Desktop\\LABORATORIO_2_TRABAJOS_PRACTICOS\\[LAB II]  TP3.Leonardo.Manassali.2A\\TP-Finalizado\\Clases Abstractas\\Clases Abstractas.csproj",
+      "projectUniqueName": "C:\\Users\\Leo\\Desktop\\LABORATORIO_2_TRABAJOS_PRACTICOS\\[LAB II ]  TP3.Leonardo.Manassali.2A\\TP-Finalizado\\Clases Abstractas\\Clases Abstractas.csproj",
       "projectName": "Clases Abstractas",
-      "projectPath": "C:\\Users\\Leo\\Desktop\\LABORATORIO_2_TRABAJOS_PRACTICOS\\[LAB II]  TP3.Leonardo.Manassali.2A\\TP-Finalizado\\Clases Abstractas\\Clases Abstractas.csproj",
+      "projectPath": "C:\\Users\\Leo\\Desktop\\LABORATORIO_2_TRABAJOS_PRACTICOS\\[LAB II ]  TP3.Leonardo.Manassali.2A\\TP-Finalizado\\Clases Abstractas\\Clases Abstractas.csproj",
       "packagesPath": "C:\\Users\\Leo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Leo\\Desktop\\LABORATORIO_2_TRABAJOS_PRACTICOS\\[LAB II]  TP3.Leonardo.Manassali.2A\\TP-Finalizado\\Clases Abstractas\\obj\\",
+      "outputPath": "C:\\Users\\Leo\\Desktop\\LABORATORIO_2_TRABAJOS_PRACTICOS\\[LAB II ]  TP3.Leonardo.Manassali.2A\\TP-Finalizado\\Clases Abstractas\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -221,8 +221,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\Leo\\Desktop\\LABORATORIO_2_TRABAJOS_PRACTICOS\\[LAB II]  TP3.Leonardo.Manassali.2A\\TP-Finalizado\\Excepciones\\Excepciones.csproj": {
-              "projectPath": "C:\\Users\\Leo\\Desktop\\LABORATORIO_2_TRABAJOS_PRACTICOS\\[LAB II]  TP3.Leonardo.Manassali.2A\\TP-Finalizado\\Excepciones\\Excepciones.csproj"
+            "C:\\Users\\Leo\\Desktop\\LABORATORIO_2_TRABAJOS_PRACTICOS\\[LAB II ]  TP3.Leonardo.Manassali.2A\\TP-Finalizado\\Excepciones\\Excepciones.csproj": {
+              "projectPath": "C:\\Users\\Leo\\Desktop\\LABORATORIO_2_TRABAJOS_PRACTICOS\\[LAB II ]  TP3.Leonardo.Manassali.2A\\TP-Finalizado\\Excepciones\\Excepciones.csproj"
             }
           }
         }

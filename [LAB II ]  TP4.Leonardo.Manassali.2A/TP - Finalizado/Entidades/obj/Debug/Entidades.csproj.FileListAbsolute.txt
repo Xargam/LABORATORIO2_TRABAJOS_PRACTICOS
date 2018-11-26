@@ -1,0 +1,14 @@
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Entidades\Entidades\bin\Debug\Entidades.dll
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Entidades\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Entidades\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Entidades\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Entidades\Entidades\obj\Debug\Entidades.dll
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Entidades\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Entidades\Entidades\bin\Debug\Entidades.dll.config
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Entidades\bin\Debug\Entidades.dll.config
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Entidades\bin\Debug\Entidades.dll
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Entidades\obj\Debug\Entidades.dll
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Entidades\obj\Debug\Entidades.pdb

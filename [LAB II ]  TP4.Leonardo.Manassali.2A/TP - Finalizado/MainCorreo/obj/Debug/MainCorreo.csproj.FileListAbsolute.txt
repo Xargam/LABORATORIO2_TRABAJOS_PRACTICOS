@@ -1,0 +1,14 @@
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Entidades\MainCorreo\obj\Debug\MainCorreo.csprojAssemblyReference.cache
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Entidades\MainCorreo\obj\Debug\MainCorreo.Properties.Resources.resources
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Entidades\MainCorreo\obj\Debug\MainCorreo.csproj.GenerateResource.cache
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Entidades\MainCorreo\obj\Debug\MainCorreo.csproj.CoreCompileInputs.cache
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Entidades\MainCorreo\bin\Debug\MainCorreo.exe.config
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Entidades\MainCorreo\bin\Debug\MainCorreo.exe
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Entidades\MainCorreo\bin\Debug\MainCorreo.pdb
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Entidades\MainCorreo\obj\Debug\MainCorreo.FrmPpal.resources
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Entidades\MainCorreo\obj\Debug\MainCorreo.exe
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Entidades\MainCorreo\obj\Debug\MainCorreo.pdb
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Entidades\MainCorreo\bin\Debug\Entidades.dll
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Entidades\MainCorreo\bin\Debug\Entidades.pdb
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Entidades\MainCorreo\bin\Debug\Entidades.dll.config
+C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Entidades\MainCorreo\obj\Debug\MainCorreo.csproj.CopyComplete

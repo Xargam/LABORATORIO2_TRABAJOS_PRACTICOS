@@ -198,11 +198,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Leo\\Desktop\\LABORATORIO_2_TRABAJOS_PRACTICOS\\[LAB II]  TP3.Leonardo.Manassali.2A\\TP-Finalizado\\Archivos\\Archivos.csproj",
+      "projectUniqueName": "C:\\Users\\Leo\\Desktop\\LABORATORIO_2_TRABAJOS_PRACTICOS\\[LAB II ]  TP3.Leonardo.Manassali.2A\\TP-Finalizado\\Archivos\\Archivos.csproj",
       "projectName": "Archivos",
-      "projectPath": "C:\\Users\\Leo\\Desktop\\LABORATORIO_2_TRABAJOS_PRACTICOS\\[LAB II]  TP3.Leonardo.Manassali.2A\\TP-Finalizado\\Archivos\\Archivos.csproj",
+      "projectPath": "C:\\Users\\Leo\\Desktop\\LABORATORIO_2_TRABAJOS_PRACTICOS\\[LAB II ]  TP3.Leonardo.Manassali.2A\\TP-Finalizado\\Archivos\\Archivos.csproj",
       "packagesPath": "C:\\Users\\Leo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Leo\\Desktop\\LABORATORIO_2_TRABAJOS_PRACTICOS\\[LAB II]  TP3.Leonardo.Manassali.2A\\TP-Finalizado\\Archivos\\obj\\",
+      "outputPath": "C:\\Users\\Leo\\Desktop\\LABORATORIO_2_TRABAJOS_PRACTICOS\\[LAB II ]  TP3.Leonardo.Manassali.2A\\TP-Finalizado\\Archivos\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -221,8 +221,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\Leo\\Desktop\\LABORATORIO_2_TRABAJOS_PRACTICOS\\[LAB II]  TP3.Leonardo.Manassali.2A\\TP-Finalizado\\Excepciones\\Excepciones.csproj": {
-              "projectPath": "C:\\Users\\Leo\\Desktop\\LABORATORIO_2_TRABAJOS_PRACTICOS\\[LAB II]  TP3.Leonardo.Manassali.2A\\TP-Finalizado\\Excepciones\\Excepciones.csproj"
+            "C:\\Users\\Leo\\Desktop\\LABORATORIO_2_TRABAJOS_PRACTICOS\\[LAB II ]  TP3.Leonardo.Manassali.2A\\TP-Finalizado\\Excepciones\\Excepciones.csproj": {
+              "projectPath": "C:\\Users\\Leo\\Desktop\\LABORATORIO_2_TRABAJOS_PRACTICOS\\[LAB II ]  TP3.Leonardo.Manassali.2A\\TP-Finalizado\\Excepciones\\Excepciones.csproj"
             }
           }
         }
