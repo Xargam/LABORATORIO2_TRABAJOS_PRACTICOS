@@ -83,7 +83,7 @@ namespace MainCorreo
             paquete.ServerError += new Paquete.DelegadoSqlError(this.SqlError);
             try
             {
-                correo += paquete;
+                this.correo += paquete;
             }
             catch (TrackingIdRepetidoException excepcion)
             {
@@ -98,7 +98,7 @@ namespace MainCorreo
         /// <param name="e"></param>
         private void btnMostrarTodos_Click(object sender, EventArgs e)
         {
-            this.MostrarInformacion<List<Paquete>>((IMostrar<List<Paquete>>)correo);
+            this.MostrarInformacion<List<Paquete>>((IMostrar<List<Paquete>>)this.correo);
         }
         /// <summary>
         /// Carga los datos de un objeto recibido al cuadro inferior izquierdo y guarda un archivo txt con información
