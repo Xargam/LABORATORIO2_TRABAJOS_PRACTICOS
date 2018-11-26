@@ -22,14 +22,18 @@ namespace Entidades
         /// <returns></returns>
         public static bool Guardar(this string texto, string archivo)
         {
+            //Evito que el metodo colapse con un valor nulo 
+            archivo = (object.Equals(archivo, null)) ? "" : archivo ;
+
             string ruta = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\" + archivo;
             bool existe = File.Exists(ruta);
             bool verificacion = true;
             try
             {
-                StreamWriter stream = new StreamWriter(ruta,existe);
-                stream.WriteLine(texto);
-                stream.Close();
+                using (StreamWriter stream = new StreamWriter(ruta, existe))
+                {
+                    stream.WriteLine(texto);
+                } 
             }
             catch (Exception)
             {

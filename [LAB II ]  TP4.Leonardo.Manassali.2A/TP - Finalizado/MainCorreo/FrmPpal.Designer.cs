@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPpal));
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnMostrarTodos = new System.Windows.Forms.Button();
             this.cmsListas = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -99,7 +100,7 @@
             this.groupBox1.Size = new System.Drawing.Size(777, 294);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Estado Paquetes";
+            this.groupBox1.Text = "Estados Paquetes";
             // 
             // lstEstadoIngresado
             // 
@@ -225,9 +226,12 @@
             this.Controls.Add(this.rtbMostrar);
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmPpal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Correo UTN por Leonardo.Manassali.2A";
             this.cmsListas.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);

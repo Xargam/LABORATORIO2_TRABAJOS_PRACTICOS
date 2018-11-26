@@ -38,3 +38,23 @@ C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leon
 C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Tests Unitarios\obj\Debug\Tests Unitarios.csproj.CopyComplete
 C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Tests Unitarios\obj\Debug\Tests Unitarios.dll
 C:\Users\Leo\Desktop\XARGAM_LABORATORIO-2\Trabajos prácticos\[LAB II ] TP4.Leonardo.Manassali.2A\TP\Tests Unitarios\obj\Debug\Tests Unitarios.pdb
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II ]  TP4.Leonardo.Manassali.2A\TP - Finalizado\Tests Unitarios\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II ]  TP4.Leonardo.Manassali.2A\TP - Finalizado\Tests Unitarios\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II ]  TP4.Leonardo.Manassali.2A\TP - Finalizado\Tests Unitarios\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II ]  TP4.Leonardo.Manassali.2A\TP - Finalizado\Tests Unitarios\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II ]  TP4.Leonardo.Manassali.2A\TP - Finalizado\Tests Unitarios\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II ]  TP4.Leonardo.Manassali.2A\TP - Finalizado\Tests Unitarios\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II ]  TP4.Leonardo.Manassali.2A\TP - Finalizado\Tests Unitarios\bin\Debug\Tests Unitarios.dll
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II ]  TP4.Leonardo.Manassali.2A\TP - Finalizado\Tests Unitarios\bin\Debug\Tests Unitarios.pdb
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II ]  TP4.Leonardo.Manassali.2A\TP - Finalizado\Tests Unitarios\bin\Debug\Entidades.dll
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II ]  TP4.Leonardo.Manassali.2A\TP - Finalizado\Tests Unitarios\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II ]  TP4.Leonardo.Manassali.2A\TP - Finalizado\Tests Unitarios\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II ]  TP4.Leonardo.Manassali.2A\TP - Finalizado\Tests Unitarios\bin\Debug\Entidades.pdb
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II ]  TP4.Leonardo.Manassali.2A\TP - Finalizado\Tests Unitarios\bin\Debug\Entidades.dll.config
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II ]  TP4.Leonardo.Manassali.2A\TP - Finalizado\Tests Unitarios\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II ]  TP4.Leonardo.Manassali.2A\TP - Finalizado\Tests Unitarios\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II ]  TP4.Leonardo.Manassali.2A\TP - Finalizado\Tests Unitarios\obj\Debug\Tests Unitarios.csprojAssemblyReference.cache
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II ]  TP4.Leonardo.Manassali.2A\TP - Finalizado\Tests Unitarios\obj\Debug\Tests Unitarios.csproj.CoreCompileInputs.cache
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II ]  TP4.Leonardo.Manassali.2A\TP - Finalizado\Tests Unitarios\obj\Debug\Tests Unitarios.csproj.CopyComplete
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II ]  TP4.Leonardo.Manassali.2A\TP - Finalizado\Tests Unitarios\obj\Debug\Tests Unitarios.dll
+C:\Users\Leo\Desktop\LABORATORIO_2_TRABAJOS_PRACTICOS\[LAB II ]  TP4.Leonardo.Manassali.2A\TP - Finalizado\Tests Unitarios\obj\Debug\Tests Unitarios.pdb

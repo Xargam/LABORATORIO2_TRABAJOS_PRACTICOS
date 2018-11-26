@@ -27,7 +27,7 @@ namespace Entidades
             }
             set
             {
-                this.direccionEntrega = value;
+                this.direccionEntrega = (object.Equals(value, null)) ? this.direccionEntrega : value;
             }
         }
         /// <summary>
@@ -55,7 +55,7 @@ namespace Entidades
             }
             set
             {
-                this.trackingID = value;
+                this.trackingID = (object.Equals(value, null)) ? this.trackingID : value;
             }
         }
         #endregion
@@ -68,8 +68,8 @@ namespace Entidades
         /// <param name="trackingID">Cadena con Tracking ID del objeto.</param>
         public Paquete( string direccionEntrega , string trackingID) 
         {
-            this.direccionEntrega = direccionEntrega;
-            this.trackingID = trackingID;
+            this.DireccionEntrega = direccionEntrega;
+            this.TrackingID = trackingID;
             this.Estado = EEstado.Ingresado;
         }
         #endregion
@@ -83,7 +83,7 @@ namespace Entidades
         /// <returns></returns>
         public static bool operator ==(Paquete p1 , Paquete p2)
         {
-            return  p1.TrackingID == p2.TrackingID;
+            return !object.Equals(p1, null) && !object.Equals(p2, null) && p1.TrackingID == p2.TrackingID;
         }
         /// <summary>
         /// Define si dos paquetes son distintos comparando su atributo TrackingID.
@@ -108,10 +108,13 @@ namespace Entidades
             {
                 Thread.Sleep(4000);
                 this.Estado++;
-                this.InformaEstado(new object(),new EventArgs());
+                this.InformaEstado(null,null);
             }
             while ( this.Estado != EEstado.Entregado );
-            PaqueteDAO.Insertar(this);
+            if( !PaqueteDAO.Insertar(this) )
+            {
+                this.ServerError();
+            }
         }
         /// <summary>
         /// Retorna una cadena que representa a este objeto.
@@ -120,7 +123,7 @@ namespace Entidades
         /// <returns></returns>
         public string MostrarDatos(IMostrar<Paquete> elemento)
         {
-            return string.Format("{0} para {1}", ((Paquete)elemento).TrackingID , ((Paquete)elemento).DireccionEntrega );
+            return (object.Equals(elemento,null))? "" : string.Format("{0} para {1}\r\n", ((Paquete)elemento).TrackingID , ((Paquete)elemento).DireccionEntrega );
         }
         /// <summary>
         /// Devuelve una cadena que representa a este objeto.
@@ -132,12 +135,15 @@ namespace Entidades
         }
         #endregion
 
+        //Agregado evento de control de errores de SQL (Habilitado por fragmento de enunciado de PaqueteDAO).
         #region Eventos
         public event DelegadoEstado InformaEstado;
+        public event DelegadoSqlError ServerError;
         #endregion
 
         #region Delegados
         public delegate void DelegadoEstado(object sender, EventArgs e); 
+        public delegate void DelegadoSqlError(); 
         #endregion
 
         #region Enumerados

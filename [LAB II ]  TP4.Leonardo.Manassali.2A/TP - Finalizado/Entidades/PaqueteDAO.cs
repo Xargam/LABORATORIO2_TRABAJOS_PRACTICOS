@@ -37,19 +37,31 @@ namespace Entidades
         /// <returns></returns>
         public static bool Insertar(Paquete p)
         {
+            bool verificacion = true;
             try
             {
                 PaqueteDAO.comando.CommandText = String.Format("INSERT INTO [correo-sp-2017].[dbo].[Paquetes] " +
                     "(direccionEntrega,trackingID,alumno) VALUES ('{0}','{1}','{2}')",p.DireccionEntrega,p.TrackingID,"Leonardo Manassali");
                 PaqueteDAO.conexion.Open();
                 PaqueteDAO.comando.ExecuteNonQuery();
-                PaqueteDAO.conexion.Close();
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                throw e;
+                verificacion = false;
             }
-            return true;
+            finally
+            {
+                try
+                {
+                    PaqueteDAO.conexion.Close();
+                }
+                catch (Exception)
+                {
+                    verificacion = false;
+                }
+                
+            }
+            return verificacion;
         }
         #endregion
     }

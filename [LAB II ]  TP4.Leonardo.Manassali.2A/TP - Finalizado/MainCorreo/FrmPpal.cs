@@ -16,9 +16,10 @@ namespace MainCorreo
         #region Atributos
         private Correo correo;
         #endregion
+
         #region Constructores
         /// <summary>
-        /// Inicializa una nueva instancia del formulario. Establece evento para el funcionamiento e instancia atributo
+        /// Inicializa una nueva instancia del formulario. Establece el evento para el funcionamiento e instancia atributo
         /// correo.
         /// </summary>
         public FrmPpal()
@@ -38,6 +39,13 @@ namespace MainCorreo
         private void FrmPpal_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.correo.FinEntregas();
+        }
+        /// <summary>
+        /// Muestra un mensaje de error acorde a un error de conexion a base de datos.
+        /// </summary>
+        private void SqlError()
+        {
+            MessageBox.Show("Carga errónea. Fallo durante conexión con la base de datos de paquetes.", "FATAL ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         /// <summary>
         /// Limpia los listBox del formulario y carga los paquetes nuevamente donde correspondan.
@@ -64,7 +72,7 @@ namespace MainCorreo
             }
         }
         /// <summary>
-        /// Agrega un paquete a la lista del formulario y actualiza los estados.
+        /// Agrega un paquete a la lista del formulario y actualiza los estados. Lo carga en una base de datos.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -72,11 +80,12 @@ namespace MainCorreo
         {
             Paquete paquete = new Paquete(this.txtDireccion.Text, this.mtxtTrackingID.Text);
             paquete.InformaEstado += new Paquete.DelegadoEstado(this.paq_InformaEstado);
+            paquete.ServerError += new Paquete.DelegadoSqlError(this.SqlError);
             try
             {
                 correo += paquete;
             }
-            catch (Exception excepcion)
+            catch (TrackingIdRepetidoException excepcion)
             {
                 MessageBox.Show(excepcion.Message,"Paquete repetido",MessageBoxButtons.OK,MessageBoxIcon.Question);
             }
@@ -99,15 +108,24 @@ namespace MainCorreo
         /// <param name="elemento"></param>
         private void MostrarInformacion<T>(IMostrar<T> elemento )
         {
+            bool error = false;
             if ( !object.Equals(elemento , null))
             {
                 string datos = elemento.MostrarDatos(elemento);
                 this.rtbMostrar.Text = datos;
-                datos.Guardar("salida.txt");
+                if ( !datos.Guardar("salida.txt") )
+                {
+                    error = true;
+                }
+                
+            }
+            if (error)
+            {
+                MessageBox.Show("Se produjo un error durante la manipulación del fichero de salida.", "FATAL ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         /// <summary>
-        /// Actualiza estados al hacer click en opción mostrar del lstEntregados.
+        ///  Muestra informacion de un elemento en particular de lstEntregados en el recuadro izquierdo inferior. 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -116,7 +134,7 @@ namespace MainCorreo
             this.MostrarInformacion<Paquete>((IMostrar<Paquete>)lstEstadoEntregado.SelectedItem);
         }
         /// <summary>
-        /// Verifica los subprocesos y actualiza los estados de los cuadros.
+        /// Verifica los subprocesos y actualiza los estados de los listBox.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

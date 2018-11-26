@@ -26,7 +26,7 @@ namespace Entidades
             }
             set
             {
-                this.paquetes = value;
+                this.paquetes = ( object.Equals(value, null)  )? this.paquetes : value;
             }
         }
         #endregion
@@ -38,7 +38,7 @@ namespace Entidades
         public Correo()
         {
             this.mockPaquetes = new List<Thread>();
-            this.paquetes = new List<Paquete>();
+            this.Paquetes = new List<Paquete>();
         }
         #endregion
 
@@ -52,17 +52,20 @@ namespace Entidades
         /// <returns>Devuelve el objeto correo.</returns>
         public static Correo operator +(Correo c ,Paquete p )
         {
-            foreach (Paquete item in c.Paquetes)
+            if (!object.Equals(c, null) && !object.Equals(p, null))
             {
-                if (item == p)
+                foreach (Paquete item in c.Paquetes)
                 {
-                    throw new TrackingIdRepetidoException(string.Format("El Tracking ID {0} ya figura en la lista de envios.",p.TrackingID));
+                    if (item == p)
+                    {
+                        throw new TrackingIdRepetidoException(string.Format("El Tracking ID {0} ya figura en la lista de envios.", p.TrackingID));
+                    }
                 }
+                c.Paquetes.Add(p);
+                Thread ciclo = new Thread(p.MockClicloDeVida);
+                c.mockPaquetes.Add(ciclo);
+                ciclo.Start();
             }
-            c.Paquetes.Add(p);
-            Thread ciclo = new Thread(p.MockClicloDeVida);
-            c.mockPaquetes.Add(ciclo);
-            ciclo.Start();
             return c;
         }
         #endregion
@@ -86,9 +89,12 @@ namespace Entidades
         public string MostrarDatos( IMostrar<List<Paquete>> elementos)
         {
             string datos = "";
-            foreach (Paquete item in ((Correo)elementos).Paquetes )
+            if ( !object.Equals(elementos,null) )
             {
-                datos += string.Format("{0} para {1} ({2})\r\n", item.TrackingID, item.DireccionEntrega, item.Estado.ToString());
+                foreach (Paquete item in ((Correo)elementos).Paquetes)
+                {
+                    datos += string.Format("{0} para {1} ({2})\r\n", item.TrackingID, item.DireccionEntrega, item.Estado.ToString());
+                }
             }
             return datos;
         }

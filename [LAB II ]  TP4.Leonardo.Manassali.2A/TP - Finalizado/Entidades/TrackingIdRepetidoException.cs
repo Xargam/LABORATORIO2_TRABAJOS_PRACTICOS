@@ -16,8 +16,8 @@ namespace Entidades
         /// Inicializa una nueva instancia de TrackingIdRepetidoException con un mensaje personalizado y una InnerException.
         /// </summary>
         /// <param name="mensaje">Mensaje a mostrar en la excepcion.</param>
-        /// <param name="innerException">Excepcion interna de esta instancia.</param>
-        public TrackingIdRepetidoException(string mensaje, Exception innerException) : base(mensaje,innerException)
+        /// <param name="inner">Excepcion interna de esta instancia.</param>
+        public TrackingIdRepetidoException(string mensaje, Exception inner) : base(mensaje,inner)
         {
         }
         #endregion
